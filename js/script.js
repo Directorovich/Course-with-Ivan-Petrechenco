@@ -5,7 +5,11 @@ let numberOfFilms;
 
 const personalMovieDB = {
     count: numberOfFilms,
-    movies: {},
+    movies: {
+        one: 'first',
+        two: 'second',
+        three: 'third'
+    },
     actors: {},
     genres: [],
     private: false
@@ -63,7 +67,25 @@ function writeYourGenres () {
 }
 
 //console.log(personalMovieDB);
+let {one, two} = personalMovieDB.movies
+console.log(one, two);
+
 */
 
+const someString = 'This is some strange string';
 
+/*function reverse(str) {
+    if (typeof (str) != 'string') {
+        return 'Ошибка!';
+    }
+    let newArr = [];
+    let arrReverse = '';
+    for (let i = 0; i < str.length; i++) {
+        newArr[i] = str[i];
+    }
+    for (let i = 0; i < str.length; i++) {
+        arrReverse += newArr.pop();
+    }
+    return arrReverse;
+}*/
 
