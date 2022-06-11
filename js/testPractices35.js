@@ -64,3 +64,21 @@ function reverse(str) {
 }
 
 console.log(reverse(someString));
+
+const someString = 'This is some strange string';
+
+function reverse(str) {
+    if (typeof (str) != 'string') {
+        return 'Ошибка!';
+    }
+    let newArr = [];
+    let arrReverse = '';
+    for (let i = 0; i < str.length; i++) {
+        newArr[i] = str[i];
+    }
+    for (let i = 0; i < str.length; i++) {
+        arrReverse += newArr.pop();
+    }
+    return arrReverse;
+}
+
