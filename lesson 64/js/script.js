@@ -143,4 +143,32 @@ window.addEventListener('DOMContentLoaded', function() {
 
     setClock('.timer', deadline);
 */
+
+    // modal
+
+    const modalWindow = document.querySelector('.modal');
+    const btnModalWindowClose = document.querySelector('[data-close]');
+    const btnModalWindowOpen = document.querySelectorAll('[data-modal]');
+
+    function closeModalWindow() {
+        modalWindow.style.display = 'none';
+        document.body.style.overflow = '';
+    }
+    function openModalWindow() {
+        modalWindow.style.display = 'block';
+        document.body.style.overflow = 'hidden';
+    }
+
+
+    btnModalWindowOpen.forEach((b) => {
+        b.addEventListener('click', openModalWindow)
+    });
+
+    btnModalWindowClose.addEventListener('click', closeModalWindow);
+
+    modalWindow.addEventListener('click', (e) => {
+        if (e.target.className === "modal") {
+            closeModalWindow();
+        }
+    })
 });
