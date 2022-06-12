@@ -1,3 +1,4 @@
+/*
 'use strict';
 document.addEventListener('DOMContentLoaded', () => {
     let numberOfFilms;
@@ -76,4 +77,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     personalMovieDB.writeYourGenres();
 })
+*/
+'use strict';
+let start = new Date();
 
+for (let i = 1; i<100; i++) {
+    let counter = i ** 10000000000;
+}
+
+let end = new Date();
+
+alert (end - start);
